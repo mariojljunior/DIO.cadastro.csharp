@@ -1,0 +1,16 @@
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.exe
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.deps.json
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.runtimeconfig.json
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.runtimeconfig.dev.json
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.dll
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\ref\DIO.Cadastros.dll
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\bin\Debug\net5.0\DIO.Cadastros.pdb
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.csproj.AssemblyReference.cache
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.AssemblyInfoInputs.cache
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.AssemblyInfo.cs
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.dll
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\ref\DIO.Cadastros.dll
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.pdb
+C:\Users\Mario\Desktop\Curso dotnet\exemplos-praticos\exercicio-01\primeiros_passos_com_dotnet\DIO.Cadastros\obj\Debug\net5.0\DIO.Cadastros.genruntimeconfig.cache
