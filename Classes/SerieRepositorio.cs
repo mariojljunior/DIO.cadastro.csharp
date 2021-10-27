@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using DIO.Cadastros;
 namespace DIO.Cadastros
 {
-	public class SerieRepositorio : IRepositorio<Serie>
+	public class SerieRepositorio : IRepositorio<Conteudo>
 	{
-        private List<Serie> listaSerie = new List<Serie>();
-		public void Atualiza(int id, Serie objeto)
+        private List<Conteudo> listaSerie = new List<Conteudo>();
+		public void Atualiza(int id, Conteudo objeto)
 		{
 			listaSerie[id] = objeto;
 		}
@@ -16,12 +16,12 @@ namespace DIO.Cadastros
 			listaSerie[id].Excluir();
 		}
 
-		public void Insere(Serie objeto)
+		public void Insere(Conteudo objeto)
 		{
 			listaSerie.Add(objeto);
 		}
 
-		public List<Serie> Lista()
+		public List<Conteudo> Lista()
 		{
 			return listaSerie;
 		}
@@ -31,7 +31,7 @@ namespace DIO.Cadastros
 			return listaSerie.Count;
 		}
 
-		public Serie RetornaPorId(int id)
+		public Conteudo RetornaPorId(int id)
 		{
 			return listaSerie[id];
 		}

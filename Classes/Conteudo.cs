@@ -2,9 +2,10 @@ using System;
 
 namespace DIO.Cadastros
 {
-    public class Serie : EntidadeBase
+    public class Conteudo : EntidadeBase
     {
         // Atributos
+        private string Tipo { get; set; }
         private Genero Genero { get; set; }
         private string Titulo { get; set; }
         private string Descricao { get; set; }
@@ -12,9 +13,10 @@ namespace DIO.Cadastros
         private bool Excluido { get; set; }
 
         // Métodos
-        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
+        public Conteudo(int id, string tipo, Genero genero, string titulo, string descricao, int ano)
         {
             this.Id = id;
+            this.Tipo = tipo;
             this.Genero = genero;
             this.Titulo = titulo;
             this.Descricao = descricao;
@@ -26,6 +28,7 @@ namespace DIO.Cadastros
         {
             // Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netcore-3.1
             string retorno = "";
+            retorno += "Tipo: " + this.Tipo + Environment.NewLine;
             retorno += "Gênero: " + this.Genero + Environment.NewLine;
             retorno += "Titulo: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
@@ -34,6 +37,10 @@ namespace DIO.Cadastros
             return retorno;
         }
 
+        public string retornaTipo()
+        {
+            return this.Tipo;
+        }
         public string retornaTitulo()
         {
             return this.Titulo;

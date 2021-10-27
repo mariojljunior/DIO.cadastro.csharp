@@ -14,19 +14,19 @@ namespace DIO.Cadastros
 				switch (opcaoUsuario)
 				{
 					case "1":
-						ListarSeries();
+						ListarConteudo();
 						break;
 					case "2":
-						InserirSerie();
+						InserirConteudo();
 						break;
 					case "3":
-						AtualizarSerie();
+						AtualizarConteudo();
 						break;
 					case "4":
-						ExcluirSerie();
+						ExcluirConteudo();
 						break;
 					case "5":
-						VisualizarSerie();
+						VisualizarConteudo();
 						break;
 					case "C":
 						Console.Clear();
@@ -40,31 +40,35 @@ namespace DIO.Cadastros
 			}
 
 			Console.WriteLine("Obrigado por utilizar nossos serviços.");
+			Console.WriteLine("Volte sempre!");
 			Console.ReadLine();
         }
 
-        private static void ExcluirSerie()
+        private static void ExcluirConteudo()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id do titulo: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			repositorio.Exclui(indiceSerie);
 		}
 
-        private static void VisualizarSerie()
+        private static void VisualizarConteudo()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id do titulo: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
-			var serie = repositorio.RetornaPorId(indiceSerie);
+			var conteudo = repositorio.RetornaPorId(indiceSerie);
 
-			Console.WriteLine(serie);
+			Console.WriteLine(conteudo);
 		}
 
-        private static void AtualizarSerie()
+        private static void AtualizarConteudo()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id do titulo: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Filme ou Série?");
+			string entradaTipoTitulo = Console.ReadLine();
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -75,46 +79,49 @@ namespace DIO.Cadastros
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write($"Digite o Título do(a) {entradaTipoTitulo}: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write($"Digite o Ano de Início do(a) {entradaTipoTitulo}: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write($"Digite a Descrição do(a) {entradaTipoTitulo}: ");
 			string entradaDescricao = Console.ReadLine();
 
-			Serie atualizaSerie = new Serie(id: indiceSerie,
+			Conteudo atualizaConteudo = new Conteudo(id: indiceSerie,
+										tipo: entradaTipoTitulo,
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
 										descricao: entradaDescricao);
 
-			repositorio.Atualiza(indiceSerie, atualizaSerie);
+			repositorio.Atualiza(indiceSerie, atualizaConteudo);
 		}
-        private static void ListarSeries()
+        private static void ListarConteudo()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("Listar títulos");
 
 			var lista = repositorio.Lista();
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma série cadastrada.");
+				Console.WriteLine("Nenhum título cadastrado.");
 				return;
 			}
 
-			foreach (var serie in lista)
+			foreach (var conteudo in lista)
 			{
-                var excluido = serie.retornaExcluido();
+                var excluido = conteudo.retornaExcluido();
                 
-				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
+				Console.WriteLine("#ID {0}: - {1} {2}", conteudo.retornaId(), conteudo.retornaTitulo(), (excluido ? "*Excluído*" : ""));
 			}
 		}
 
-        private static void InserirSerie()
+        private static void InserirConteudo()
 		{
-			Console.WriteLine("Inserir nova série");
+			Console.WriteLine("Inserir um novo título ao catalogo");
+			Console.Write("Filme ou Série: ");
+			string entradaTipoTitulo = Console.ReadLine();
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -125,35 +132,36 @@ namespace DIO.Cadastros
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write($"Digite o Título do(a) {entradaTipoTitulo}: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write($"Digite o Ano de Início do(a) {entradaTipoTitulo}: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write($"Digite a Descrição do(a) {entradaTipoTitulo}: ");
 			string entradaDescricao = Console.ReadLine();
 
-			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
+			Conteudo novoConteudo = new Conteudo(id: repositorio.ProximoId(),
+										tipo: entradaTipoTitulo,
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
 										descricao: entradaDescricao);
 
-			repositorio.Insere(novaSerie);
+			repositorio.Insere(novoConteudo);
 		}
 
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Séries a seu dispor!!!");
+			Console.WriteLine("DIO Vídeos a seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
-			Console.WriteLine("1- Listar séries");
-			Console.WriteLine("2- Inserir nova série");
-			Console.WriteLine("3- Atualizar série");
-			Console.WriteLine("4- Excluir série");
-			Console.WriteLine("5- Visualizar série");
+			Console.WriteLine("1- Listar Conteúdo");
+			Console.WriteLine("2- Inserir um novo título");
+			Console.WriteLine("3- Atualizar título");
+			Console.WriteLine("4- Excluir");
+			Console.WriteLine("5- Visualizar título");
 			Console.WriteLine("C- Limpar Tela");
 			Console.WriteLine("X- Sair");
 			Console.WriteLine();
