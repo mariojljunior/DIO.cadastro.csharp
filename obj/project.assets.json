@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\exercicio-01\\primeiros_passos_com_dotnet\\DIO.Cadastros\\DIO.Cadastros.csproj",
+      "projectUniqueName": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\primeiros_passos_com_dotnet-master\\DIO.Cadastros\\DIO.Cadastros.csproj",
       "projectName": "DIO.Cadastros",
-      "projectPath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\exercicio-01\\primeiros_passos_com_dotnet\\DIO.Cadastros\\DIO.Cadastros.csproj",
+      "projectPath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\primeiros_passos_com_dotnet-master\\DIO.Cadastros\\DIO.Cadastros.csproj",
       "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\exercicio-01\\primeiros_passos_com_dotnet\\DIO.Cadastros\\obj\\",
+      "outputPath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\primeiros_passos_com_dotnet-master\\DIO.Cadastros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

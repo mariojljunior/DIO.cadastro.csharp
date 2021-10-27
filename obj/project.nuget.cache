@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3AXWdi88HyfE7iUZx2Yf11VE0qeLcHnhA1RdoveNBafUGGkLa3ANys7PgmhXlAobES797vC4FSvXzICaBOr0gA==",
+  "dgSpecHash": "bi7c25FD/aJ0u9HfLxHWURrGUSCYCczCEIKeCE3OWAUwkAhau1UVLFFS+cFKXhm4BNhupE40b33aLCHrWA2xyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\exercicio-01\\primeiros_passos_com_dotnet\\DIO.Cadastros\\DIO.Cadastros.csproj",
+  "projectFilePath": "C:\\Users\\Mario\\Desktop\\Curso dotnet\\exemplos-praticos\\primeiros_passos_com_dotnet-master\\DIO.Cadastros\\DIO.Cadastros.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
